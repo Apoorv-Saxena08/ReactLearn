@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+button{
+  background-color: lightseagreen;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+body{
+  background-color: #4f2828;
+}
+h1{
+  font-size: 2rem;
+  color: whitesmoke;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+input{
+  color: #fff;
+}
