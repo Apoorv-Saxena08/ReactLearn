@@ -1,51 +1,25 @@
+import axios from 'axios'
 import React from 'react'
-import Card from './components/card.jsx'
+import { useState } from 'react'
+
 const App = () => {
-  const users = [
-    {
-      name: "Apoorv Saxena",
-      city: "Noida",
-      age: 19,
-      profession: "Student",
-      profilePhoto: "https://example.com/photo1.jpg"
-    },
-    {
-      name: "John Doe",
-      city: "New York",
-      age: 25,
-      profession: "Software Engineer",
-      profilePhoto: "https://example.com/photo2.jpg"
-    },
-    {
-      name: "Jane Smith",
-      city: "Los Angeles",
-      age: 30,
-      profession: "Designer",
-      profilePhoto: "https://example.com/photo3.jpg"
-    },
-    {
-      name: "Michael Johnson",
-      city: "Chicago",
-      age: 35,
-      profession: "Manager",
-      profilePhoto: "https://example.com/photo4.jpg"
-    },
-    {
-      name: "Emily Davis",
-      city: "San Francisco",
-      age: 28,
-      profession: "Product Manager",
-      profilePhoto: "https://example.com/photo5.jpg"
-    }
-  ];
-  
+  const [data, setData] = useState([])
+
+  const getData = async () =>{
+    const response =  await axios.get('https://picsum.photos/v2/list?page=2&limit=10')
+    // const data = response.data // this will be the array of objects
+    setData(response.data)
+    console.log(data)
+  }
   return (
-    <div>
-      <div className='flex justify-center'>
-        {users.map(function(elem,idx){
-          return <Card key={idx} user={elem.name} surname={elem.profession} city={elem.city} age={elem.age} image={elem.profilePhoto} />
-        })}
-      </div>
+    <div class="dibba">
+      <button onClick={getData} class="btn" >Get Data</button>
+      <div class="dataview">{data.map(function(elem , idx){
+        return <div key = {idx} class="card">
+          <img src={elem.download_url} alt="" />
+          <h1>{elem.author}</h1>
+        </div>
+      })}</div>
     </div>
   )
 }

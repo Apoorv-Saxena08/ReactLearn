@@ -20,3 +20,34 @@ body{
   background-color: #1f1f1f;
   color: white;
 }
+.dibba{
+  padding: 10px;
+}
+.btn{
+  padding: 10px;
+  background-color: teal;
+  font-weight: bolder;
+  border-radius: 20px;
+}
+.btn:active { 
+  transform: scale(0.9); 
+}
+.dataview{
+  background-color: gray;
+  color: antiquewhite;
+  margin-top: 10px;
+}
+.card{
+  background-color: lightseagreen;
+  color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+img{
+  height: 200px;
+}
