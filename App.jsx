@@ -1,25 +1,20 @@
-import axios from 'axios'
-import React from 'react'
-import { useState } from 'react'
+import React, { useContext } from 'react'
+import UserContext, { DataContext } from './context/UserContext'
+import Header from './components/Header'
+import Section from './components/Section'
+import Footer from './components/Footer'
 
 const App = () => {
-  const [data, setData] = useState([])
 
-  const getData = async () =>{
-    const response =  await axios.get('https://picsum.photos/v2/list?page=2&limit=10')
-    // const data = response.data // this will be the array of objects
-    setData(response.data)
-    console.log(data)
-  }
+  const data = useContext(DataContext)
+  // console.log(data) Apoorv
+
   return (
-    <div class="dibba">
-      <button onClick={getData} class="btn" >Get Data</button>
-      <div class="dataview">{data.map(function(elem , idx){
-        return <div key = {idx} class="card">
-          <img src={elem.download_url} alt="" />
-          <h1>{elem.author}</h1>
-        </div>
-      })}</div>
+    <div>
+      <h1>This is {data}</h1>
+      <Header />
+      <Section />
+      <Footer />
     </div>
   )
 }
