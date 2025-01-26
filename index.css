@@ -20,7 +20,7 @@ body{
   background-color: #1f1f1f;
   color: white;
 }
-.dibba{
+/* .dibba{
   padding: 10px;
 }
 .btn{
@@ -50,4 +50,44 @@ body{
 }
 img{
   height: 200px;
+} */
+
+/* .dibba{
+  padding: 10px;
+}
+.btn{
+  background-color: teal;
+  color: white;
+  font-size: larger;
+  height: auto;
+  padding: 10px;
+  border-radius: 20px;
+}
+.btn:active{
+  transform: scale(0.9);
+}
+.lines{
+  margin-bottom: 10px;
+  color: white;
+}
+.line{
+  background-color: gray;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+img{
+  height: 200px;
+} */
+
+h1{
+  text-decoration: underline;
+  font-size: 70px;
+  font-weight: 600;
+  color: white;
 }
